@@ -1,4 +1,4 @@
-import { Column, Container, Grid, spacing } from "@bornlogic/reborn";
+import { Column, Container, Grid, Logo, spacing } from "@bornlogic/reborn";
 import {
   useDismiss,
   useFloating,
@@ -7,7 +7,6 @@ import {
 } from "@floating-ui/react-dom-interactions";
 import { useState } from "react";
 import ReactDOM from "react-dom";
-import BornlogicLogo from "../../assets/bornlogic_logo.png";
 import { useAuth } from "@bornlogic/util-auth-mf";
 import * as S from "./style";
 
@@ -60,12 +59,7 @@ function Navbar(props: NavbarProps) {
         <Grid>
           <Column larger={12}>
             <S.NavbarNav>
-              <img
-                width={95}
-                height={24}
-                src={BornlogicLogo}
-                alt="Logo da Bornlogic"
-              />
+              <Logo size="small" iconOnly={false} />
 
               <S.UserInfo>
                 <S.UserAvatarButton
