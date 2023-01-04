@@ -1,15 +1,12 @@
 {
   "extends": "ts-config-single-spa",
   "compilerOptions": {
+    "outDir": "dist",
+    "skipLibCheck": false,
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "paths": {
-      "@bornlogic/util-auth-mf": [
-        "../../util-auth-mf/src/bornlogic-util-auth-mf"
-      ]
-    }
+    "noUnusedParameters": true
   },
   "files": ["src/bornlogic-app-results-mf.tsx"],
   "include": ["src/**/*"],

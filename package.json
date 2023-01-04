@@ -14,7 +14,7 @@
     "watch-tests": "cross-env BABEL_ENV=test jest --watch",
     "prepare": "husky install",
     "coverage": "cross-env BABEL_ENV=test jest --coverage",
-    "build:types": "tsc -p tsconfig.prod.json"
+    "build:types": "tsc"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -59,6 +59,7 @@
     "@types/react-dom": "^17.0.9",
     "@types/systemjs": "^6.1.1",
     "@types/webpack-env": "^1.16.2",
+    "axios": "^1.2.2",
     "dotenv": "^16.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
