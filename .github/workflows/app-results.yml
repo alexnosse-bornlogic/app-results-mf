@@ -1,0 +1,26 @@
+name: "👷‍♂️  App Business Center"
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - name: 🔑 Setting AWS credentials 🔑
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - name: 🕸️ Installing Dependencies 🕸️
+        run: yarn install
+      - name: 🧱 Building App 🧱
+        run: yarn build
+      - name: 🪖 Deploying App 🪖
+        run: yarn deploy
